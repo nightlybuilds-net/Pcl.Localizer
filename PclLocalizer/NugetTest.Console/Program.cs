@@ -17,7 +17,7 @@ namespace NugetTest.Console
             PclResMan.SetLanguage(current);
 
             System.Console.WriteLine($"Current is: {current}");
-            System.Console.WriteLine($"Ciao is: {TestLoc.SayHello}");
+            System.Console.WriteLine($"Ciao is: {TestLoc.Common_IdealWeight}");
 
             System.Console.ReadLine();
 
@@ -25,7 +25,7 @@ namespace NugetTest.Console
 
             PclResMan.SetLanguage("en");
 
-            System.Console.WriteLine($"Ciao is: {TestLoc.SayHello}");
+            System.Console.WriteLine($"Ciao is: {TestLoc.Generic_WantStartNewExam}");
 
             System.Console.ReadLine();
 

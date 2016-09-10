@@ -50,10 +50,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NugetTest\NugetTest.csproj">
-      <Project>{5ec9f33d-990a-4ed6-86ed-9bc4d127e63d}</Project>
-      <Name>NugetTest</Name>
-    </ProjectReference>
     <ProjectReference Include="..\PclLocalizer.ResMan\PclLocalizer.ResMan.csproj">
       <Project>{3719D1C0-F9BD-4DD0-8162-7B7EEB285FFD}</Project>
       <Name>PclLocalizer.ResMan</Name>

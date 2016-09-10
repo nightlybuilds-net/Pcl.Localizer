@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PclLocalizer.Console.Properties;
 
 namespace PclLocalizer.Console.Worker
 {
@@ -42,7 +43,7 @@ namespace PclLocalizer.Console.Worker
             var separator = this._extractor.Separator;
             var nameSpace = this._extractor.NameSpace;
 
-            var magic = File.ReadAllText("File/MagicFile.txt");
+            var magic = Resources.MagicFile;// File.ReadAllText("File/MagicFile.txt");
 
             //Add destination name
             magic = magic.Replace(Constants.DestinationPlaceHolder, destination);
@@ -96,7 +97,7 @@ namespace PclLocalizer.Console.Worker
                 var splitted = lines[index].Split(new[] { separator }, StringSplitOptions.None);
                 var key = splitted[0];
 
-                propertiesSection.AppendLine($"\t\t\tpublic static string {key} => GetValue(\"{key}\");");
+                propertiesSection.AppendLine($"\t\tpublic static string {key} => GetValue(\"{key}\");");
             }
 
             magic = magic.Replace(Constants.PropertiesPlaceHolder, propertiesSection.ToString());

@@ -48,9 +48,6 @@
     <None Include="TheBatch.bat" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="File\MagicFile.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="PclLocalizer.Console.exe" />
   </ItemGroup>
   <ItemGroup />

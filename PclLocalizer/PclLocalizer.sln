@@ -13,6 +13,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NugTest", "NugTest", "{D1F1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NugetTest.Console", "NugetTest.Console\NugetTest.Console.csproj", "{523CC58C-10C1-4628-BCA3-9D3FE30B670C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Benchmark", "Benchmark", "{3A6B0B2F-34DC-402B-B1B4-8797DBD50840}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PclLocalizer.Benchmark", "PclLocalizer.Benchmark\PclLocalizer.Benchmark.csproj", "{D013BDC7-9F87-4199-81ED-E226539BADA5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +39,10 @@ Global
 		{523CC58C-10C1-4628-BCA3-9D3FE30B670C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{523CC58C-10C1-4628-BCA3-9D3FE30B670C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{523CC58C-10C1-4628-BCA3-9D3FE30B670C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D013BDC7-9F87-4199-81ED-E226539BADA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D013BDC7-9F87-4199-81ED-E226539BADA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D013BDC7-9F87-4199-81ED-E226539BADA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D013BDC7-9F87-4199-81ED-E226539BADA5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -42,5 +50,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{5EC9F33D-990A-4ED6-86ED-9BC4D127E63D} = {D1F197C3-0388-4BD2-8788-5A5D553CEC00}
 		{523CC58C-10C1-4628-BCA3-9D3FE30B670C} = {D1F197C3-0388-4BD2-8788-5A5D553CEC00}
+		{D013BDC7-9F87-4199-81ED-E226539BADA5} = {3A6B0B2F-34DC-402B-B1B4-8797DBD50840}
 	EndGlobalSection
 EndGlobal

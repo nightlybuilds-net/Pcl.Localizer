@@ -51,10 +51,10 @@ namespace PclLocalizer.Console.Worker
 
             //Check file
             var lines = File.ReadAllLines(input);
-            var firstLine = lines[0].Split(new[] { separator }, StringSplitOptions.None);
+            var firstLine = lines[0].Split(new[] { separator }, StringSplitOptions.None).ToList();
             var languages = new List<string>();
 
-            for (int i = 1; i < firstLine.Length; i++)
+            for (int i = 1; i < firstLine.Count; i++)
             {
                 languages.Add(firstLine[i]);
                 System.Console.WriteLine($"Language {firstLine[i]} found.");
@@ -68,9 +68,9 @@ namespace PclLocalizer.Console.Worker
                 dictionaryCounter++;
                 var varname = $"d{dictionaryCounter}";
 
-                dictionarySection.Append($"var {varname} = new Dictionary<string, string> {{");
+                dictionarySection.Append($"\t\t\tvar {varname} = new Dictionary<string, string> {{");
                 
-                var langIndex = languages.IndexOf(language);
+                var langIndex = firstLine.IndexOf(language);
                 for (int index = 0; index < lines.Length; index++)
                 {
                     if(index == 0)continue;
@@ -82,7 +82,7 @@ namespace PclLocalizer.Console.Worker
                 }
                 dictionarySection.Remove(dictionarySection.Length - 1, 1);
                 dictionarySection.Append($"}};{Environment.NewLine}");
-                dictionarySection.Append($"values.Add(\"{language}\", {varname});{Environment.NewLine}");
+                dictionarySection.Append($"\t\t\tvalues.Add(\"{language}\", {varname});{Environment.NewLine}");
             }
 
             magic = magic.Replace(Constants.DictionariesPlaceHolder, dictionarySection.ToString());
@@ -96,7 +96,7 @@ namespace PclLocalizer.Console.Worker
                 var splitted = lines[index].Split(new[] { separator }, StringSplitOptions.None);
                 var key = splitted[0];
 
-                propertiesSection.AppendLine($"public static string {key} => GetValue(\"{key}\");");
+                propertiesSection.AppendLine($"\t\t\tpublic static string {key} => GetValue(\"{key}\");");
             }
 
             magic = magic.Replace(Constants.PropertiesPlaceHolder, propertiesSection.ToString());

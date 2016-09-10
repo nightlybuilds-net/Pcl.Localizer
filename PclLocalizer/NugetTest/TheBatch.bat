@@ -1,1 +1,0 @@
-PclLocalizer.Console.exe -f TestRes.csv -n NugetTest -d TestLoc.cs -c TestLoc -s ;

@@ -25,10 +25,10 @@ namespace Test.Console
             var stopWatch = new Stopwatch();
             stopWatch.Start();
 
-            for (int i = 0; i < 1000; i++)
+            for (int i = 0; i < 10000; i++)
             {
-                //var t  = Resource1.A;
-                var t = TestRes.Value1;
+                var t  = Resource1.A;
+                //var t = TestRes.Value1;
                 System.Console.WriteLine(t);
             }
 

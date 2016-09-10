@@ -2,24 +2,20 @@
 using System.Linq;
 using PclLocalizer.ResMan;
 
-namespace Test
+namespace {{namespace}}
 {
-    public static class TestRes
+    public static class {{destination}}
     {
         private static Dictionary<string,Dictionary<string,string>> values = new Dictionary<string, Dictionary<string, string>>();
 
-        static TestRes()
+        static {{destination}}()
         {
-            var enDic = new Dictionary<string, string> {{"saluta", "hello!"}};
-            var itDic = new Dictionary<string, string> {{"saluta", "ciao!"}};
-
-            values.Add("en", enDic);
-            values.Add("it", itDic);
+            {{dictionaries}}            
         }
 
-        public static string Value1 => GetValue("saluta");
+        {{properties}}
 
-        private static string GetValue(string key)
+		private static string GetValue(string key)
         {
             if (values.ContainsKey(PclResMan.Lang))
                 return values[ResourceManager.Lang][key];

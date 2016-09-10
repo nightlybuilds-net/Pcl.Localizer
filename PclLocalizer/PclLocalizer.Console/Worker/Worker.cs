@@ -40,13 +40,14 @@ namespace PclLocalizer.Console.Worker
         {
             var input = this._extractor.InputFile;
             var destination = this._extractor.DestinationFile;
+            var className = this._extractor.ClassName;
             var separator = this._extractor.Separator;
             var nameSpace = this._extractor.NameSpace;
 
             var magic = Resources.MagicFile;// File.ReadAllText("File/MagicFile.txt");
 
             //Add destination name
-            magic = magic.Replace(Constants.DestinationPlaceHolder, destination);
+            magic = magic.Replace(Constants.ClassNamePlaceHolder, className);
             //Add namespace
             magic = magic.Replace(Constants.NamespacePlaceHolder, nameSpace);
 
@@ -83,7 +84,7 @@ namespace PclLocalizer.Console.Worker
                 }
                 dictionarySection.Remove(dictionarySection.Length - 1, 1);
                 dictionarySection.Append($"}};{Environment.NewLine}");
-                dictionarySection.Append($"\t\t\tvalues.Add(\"{language}\", {varname});{Environment.NewLine}");
+                dictionarySection.Append($"\t\t\tValues.Add(\"{language}\", {varname});{Environment.NewLine}");
             }
 
             magic = magic.Replace(Constants.DictionariesPlaceHolder, dictionarySection.ToString());
@@ -102,7 +103,7 @@ namespace PclLocalizer.Console.Worker
 
             magic = magic.Replace(Constants.PropertiesPlaceHolder, propertiesSection.ToString());
 
-            File.WriteAllText($"{destination}.cs",magic);
+            File.WriteAllText(destination,magic);
 
             System.Console.WriteLine("All done!");
         }
@@ -114,7 +115,8 @@ namespace PclLocalizer.Console.Worker
             System.Console.WriteLine("I need those args:");
             System.Console.WriteLine("-f INPUTFILE => the input file with a separator");
             System.Console.WriteLine("-s SEPARATOR => the separator for input file");
-            System.Console.WriteLine("-d DESTINATIONCLASSNAME => the destination classname/file");
+            System.Console.WriteLine("-d DESTINATIONFILE => the destination file");
+            System.Console.WriteLine("-c CLASSNAME => the destination classname file");
             System.Console.WriteLine("-n NAMESPACE => the namespace for generated class");
             System.Console.WriteLine("The first line of input file must be:");
             System.Console.WriteLine("Column[0]: key");

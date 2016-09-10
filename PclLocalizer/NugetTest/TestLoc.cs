@@ -9,28 +9,146 @@ namespace NugetTest
     /// </summary>
     public static class TestLoc
     {
-        private static Dictionary<string,Dictionary<string,string>> values = new Dictionary<string, Dictionary<string, string>>();
+        private static readonly Dictionary<string,Dictionary<string,string>> Values = new Dictionary<string, Dictionary<string, string>>();
 
         static TestLoc()
         {
-			var d1 = new Dictionary<string, string> {{"SayHello","Ciao!"},{"Play","Giocare"}};
-			values.Add("it-IT", d1);
-			var d2 = new Dictionary<string, string> {{"SayHello","Hello!"},{"Play","Play"}};
-			values.Add("en", d2);
+			var d1 = new Dictionary<string, string> {{"App_Name","PREnet App"},{"Archive_NoExams","Nessun esame salvato disponibile."},{"Back_BackGroundMayAffect","UNO SFONDO NON ADEGUATO PUO' INFLUIRE SUI RISULTATI"},{"Back_PhotoNoSubject","FAI UNA FOTO SENZA SOGGETTO"},{"Back_Purpose","Scopo: conformit� sfondo"},{"Back_Start","Start Test!"},{"Back_Title","CONTROLLO SFONDO"},{"Common_Difference","Differenza"},{"Common_IdealWeight","Peso Ideale"},{"Common_NewExam","NUOVO ESAME"},{"Common_Weight","Peso"},{"Data_ChoosePicture","Scegli una foto dalla galleria oppure scattane una con la fotocamera"},{"Data_DirectFromCamera","Scatta dalla fotocamera"},{"Data_InsertBirthDate","Seleziona la data di nascita"},{"Data_InsertGender","Seleziona il sesso"},{"Data_InsertHeight","Inserisci l'altezza (cm)"},{"Data_InsertWeight","Inserisci il peso (kg)"},{"Data_UploadFromFolder","Seleziona dalla galleria"},{"Generic_Error","Si � verificato un errore."},{"Generic_WantStartNewExam","Vuoi avviare un nuovo esame?"},{"Home_About","ABOUT"},{"Home_ApplicationTutorial","TUTORIAL"},{"Home_ConfirmLogout","Vuoi davvero effetture il logout?"},{"Home_Credits","Crediti:"},{"Home_Links","LINKS"},{"Home_Logout","LOGOUT"},{"Home_PurchaseCredits","ACQUISTA"},{"Home_StartButton","INIZIA !"},{"Home_TestBackground","TEST SFONDO"},{"Login_Failed","Login Failed!"},{"Login_InvalidForm","Username and password are mandatory!"},{"Login_JoinUs","Login/Registrati"},{"Login_Links","Scopri il programma PREnet"},{"Login_Login","Login"},{"Login_Register","Registrati"},{"Login_RememberMe","Ricordami"},{"Msg_InternetRequired","Internet connection required!"},{"Purchase_CantBuyCredits","Sembra che tu non possa fare acquisti.."},{"Purchase_ConfirmConsume","Confermi di voler utilizzare {0} crediti?"},{"Purchase_Consumable","Acquista sottoscrizione di 7 giorni"},{"Purchase_Credits_X25","Acquista 25 crediti!"},{"Purchase_Credits_X5","Acquista 5 crediti!"},{"Purchase_Done","Acquisto completato correttamente."},{"Purchase_ElementLocked","Elemento bloccato"},{"Purchase_Error","Acquisto non completato"},{"Purchase_FreeFeatures","Risultato disponibile gratuitamente"},{"Purchase_Full_Description","Prenet app full body composition subscritpion. It grants you access to all services such, Anthropometric evaluation and cardiovascular risks, ideal shape suggestion plus Body composition lite features: Fat and Fat-free mass, Body water, BMR and TEE."},{"Purchase_Full_Title","Full body composition subcription"},{"Purchase_Light_Description","With this subscription you gain access to the following services: Fat-Free mass and Total Body water estimates. BMI and ideal weight evaluation. Metabolism estimate (BMR) and total daily energy expenditure (TEE)."},{"Purchase_Light_Title","Body Composition Lite subscription"},{"Purchase_NotEnoughtCredits","Non hai abbastanza crediti!"},{"Purchase_Restore","Ripristina acquisti gi� effettuati.."},{"Purchase_Subscription3","Acquista sottoscrizione di 3 mesi"},{"Result_BellySection","Sezione addominale"},{"Result_Bmi_Title","BMI"},{"Result_Bmr","Tasso Metabolico Basale"},{"Result_Bmr_Title","BMR"},{"Result_ChestSection","Sezione Petto:"},{"Result_FatMass_Title","MASSA GRASSA"},{"Result_FreeFatMass_Title1","MASSA MAGRA"},{"Result_HipSection","Sezione Anca:"},{"Result_Shakes","SHAKES"},{"Result_Tbw","Acqua Corporea"},{"Result_Tbw_Title","Acqua Corporea Totale"},{"Result_Tee","TEE (KCal)"},{"Result_TeeDescription","TEE"},{"Results_BellyHt","Rapporto Addome/Altezza:"},{"Results_BMI","BMI (Indice Massa Corporea)"},{"Results_CompareShape","CONFRONTO"},{"Results_FFmKg","FFM (Massa Magra):"},{"Results_FFmPercent","FFM (Massa Magra):"},{"Results_FmKg","FM (Massa Grassa):"},{"Results_FmPercent","FM (Massa Grassa):"},{"Results_HowYouAre","COME SEI"},{"Results_HowYouShouldBe","COME DOVRESTI ESSERE"},{"Results_IdealFFmKg","Ideal FFM (Massa Magra):"},{"Results_IdealFmKg","FM (Massa Grassa) Ideale:"},{"Results_IdealShape","Forma ideale"},{"Results_StartNewExam","INIZIA UN NUOVO ESAME!"},{"Settings_QuickMode","QUICK INSERT MODE:"},{"Shakes_1MixedMealOf","Shakes_1MixedMealOf"},{"Shakes_2PrenetShakes","Shakes_FatRegulationPhase1"},{"Shakes_BcmRegulationAdaption","BCM Regulation & Adaption"},{"Shakes_Breakfast","Breakfast:"},{"Shakes_FatRegulationPhase","Shakes_FatRegulationPhase"},{"Shakes_Men","Men 400 Kcal"},{"Shakes_MixedMealOf","mixed meal of"},{"Shakes_PrenetShakes","Prenet Shakes 210 Kcal"},{"Shakes_Women","Women 300 Kcal"},{"Start_Archive","ARCHIVIO"},{"Start_Demo","DEMO"},{"TEE_Athlet","Atleta"},{"TEE_ChooseLifeStyle","PAL (livello di attivit� fisica)"},{"TEE_LowActivity","Poco Attivo"},{"TEE_NoActivity","Non Attivo"},{"TEE_NormalActivity","Normalmente Attivo"},{"TEE_Sedentary","Sedentario"},{"TEE_VeryActivity","Molto Attivo"},{"Tutorial_CarouselHelpLbl","Swipe for change tutorial step"},{"Tutorial_HowMakePhoto","How to take the picture"},{"Tutorial_PaintStep_Antro","SPOSTA LA LINEA ROSSA SUL PETTO/SENO"},{"Tutorial_PaintStep1_1","SPOSTA ED ALLINEA LA LINEA VERDE SUPERIORE CON GLI OCCHI"},{"Tutorial_PaintStep1_2","SPOSTA ED ALLINEA LA LINEA VERDE INFERIORE CON LA CAVIGLIA"},{"Tutorial_PaintStep1_3","ATTENZIONE! QUESTA OPERAZIONE E' MOLTO IMPORTANTE AI FINI DEL RISULTATO"},{"Tutorial_PaintStep2_1","CLICCA L'ICONA"},{"Tutorial_PaintStep2_2","PER SELEZIONARE IL COLORE DEL COSTUME"},{"Tutorial_PaintStep2_3","L'APPLICAZIONE PROVERA' A RICONOSCERLO AUTOMATICAMENTE"},{"Tutorial_PaintStep3_1","SELEZIONARE QUALE ALGORITMO SCONTORNA MEGLIO LA FIGURA"},{"Tutorial_PaintStep3_2","UNO UTILIZZA IL TONO DELLA PELLE L'ALTRO I CONTRASTI"},{"Tutorial_PaintStep3_3","NON TI PREOCCUPARE DELLE PICCOLE IMPERFEZIONI POSSONO ESSERE CORRETTE IN SEGUITO"},{"Tutorial_PaintStep4_1","USARE IL PENNELLINO PER CORREGGE LE IMPERFEZIONI"},{"Tutorial_PaintStep4_2","BIANCO PER IL CORPO"},{"Tutorial_PaintStep4_3","NERO PER LO SFONDO"},{"Tutorial_PaintStep4_4","UTILIZZA L'ICONA PER TORNARE INDIETRO IN CASO DI ERRORI"},{"Website","www.akern.com"},{"Words_Alert","Attenzione"},{"Words_Error","Errore"},{"Words_No","No"},{"Words_Ok","OK"},{"Words_Yes","Si"}};
+			Values.Add("it-IT", d1);
+			var d2 = new Dictionary<string, string> {{"App_Name","PREnet App"},{"Archive_NoExams","No saved exams available.."},{"Back_BackGroundMayAffect","NON ADEGUATE BACKGROUND MAY AFFECT RESULTS"},{"Back_PhotoNoSubject","TAKE A PHOTO WITH NO SUBJECT"},{"Back_Purpose","Purpose: Adequacy"},{"Back_Start","Start Test!"},{"Back_Title","BACKGROUND CONTROL"},{"Common_Difference","Difference"},{"Common_IdealWeight","Ideal Weight"},{"Common_NewExam","NEW EXAM"},{"Common_Weight","Weight"},{"Data_ChoosePicture","Upload from photo gallery or take a picture directly from camera."},{"Data_DirectFromCamera","Direct from camera"},{"Data_InsertBirthDate","Select your date of birth"},{"Data_InsertGender","Select Gender"},{"Data_InsertHeight","Select your height (cm)"},{"Data_InsertWeight","Select your weight (kg)"},{"Data_UploadFromFolder","Upload from folder"},{"Generic_Error","An error has occurred"},{"Generic_WantStartNewExam","Do you really want to start a new exam?"},{"Home_About","ABOUT"},{"Home_ApplicationTutorial","TUTORIAL"},{"Home_ConfirmLogout","You really want to log out ?"},{"Home_Credits","Credits:"},{"Home_Links","LINKS"},{"Home_Logout","LOGOUT"},{"Home_PurchaseCredits","PURCHASE"},{"Home_StartButton","START"},{"Home_TestBackground","TEST BACKGROUND"},{"Login_Failed","Login Failed!"},{"Login_InvalidForm","Username and password are mandatory!"},{"Login_JoinUs","Login / Join Us"},{"Login_Links","Discover the PREnet Program"},{"Login_Login","Login"},{"Login_Register","Sign Up"},{"Login_RememberMe","Remember me"},{"Msg_InternetRequired","Internet connection required!"},{"Purchase_CantBuyCredits","It seems like you can not make purchases.."},{"Purchase_ConfirmConsume","Confirm that you want to use {0} credits ?"},{"Purchase_Consumable","Buy a 7 days subscription"},{"Purchase_Credits_X25","Buy 25 credits!"},{"Purchase_Credits_X5","Buy 5 credits!"},{"Purchase_Done","Purchase completed successfully!"},{"Purchase_ElementLocked","Blocked Content"},{"Purchase_Error","Purchase not completed"},{"Purchase_FreeFeatures","Feature available for free"},{"Purchase_Full_Description","Prenet app full body composition subscritpion. It grants you access to all services such, Anthropometric evaluation and cardiovascular risks, ideal shape suggestion plus Body composition lite features: Fat and Fat-free mass, Body water, BMR and TEE."},{"Purchase_Full_Title","Full body composition subscription"},{"Purchase_Light_Description","With this subscription you gain access to the following services: Fat-Free mass and Total Body water estimates. BMI and ideal weight evaluation. Metabolism estimate (BMR) and total daily energy expenditure (TEE)."},{"Purchase_Light_Title","Body Composition Lite subscription"},{"Purchase_NotEnoughtCredits","You do not have enough credits!"},{"Purchase_Restore","Restore previous purchases.."},{"Purchase_Subscription3","Buy a 3 months subscription"},{"Result_BellySection","Belly Section"},{"Result_Bmi_Title","BMI"},{"Result_Bmr","Basal Metabolic Rate"},{"Result_Bmr_Title","BMR"},{"Result_ChestSection","Chest Section:"},{"Result_FatMass_Title","FAT MASS"},{"Result_FreeFatMass_Title1","FAT FREE MASS"},{"Result_HipSection","Hip Section:"},{"Result_Shakes","SHAKES"},{"Result_Tbw","Total Body Water"},{"Result_Tbw_Title","BODY WATER"},{"Result_Tee","TEE (KCal)"},{"Result_TeeDescription","TEE"},{"Results_BellyHt","Abdomen/Height Ratio:"},{"Results_BMI","BMI (Body Mass Index)"},{"Results_CompareShape","COMPARE SHAPES"},{"Results_FFmKg","FFM (Fat Free Mass):"},{"Results_FFmPercent","FFM (Fat Free Mass):"},{"Results_FmKg","FM (Fat Mass):"},{"Results_FmPercent","FM (Fat Mass):"},{"Results_HowYouAre","HOW YOU ARE"},{"Results_HowYouShouldBe","HOW YOU SHOULD BE"},{"Results_IdealFFmKg","Ideal FFM (Fat Free Mass):"},{"Results_IdealFmKg","Ideal FM (Fat Mass):"},{"Results_IdealShape","Ideal Shape"},{"Results_StartNewExam","START NEW EXAM!"},{"Settings_QuickMode","QUICK INSERT MODE:"},{"Shakes_1MixedMealOf","1 mixed meal of"},{"Shakes_2PrenetShakes","2 Prenet shakes"},{"Shakes_BcmRegulationAdaption","BCM Regulation & Adaption"},{"Shakes_Breakfast","Breakfast:"},{"Shakes_FatRegulationPhase","Fat Regulation phase"},{"Shakes_Men","Men 400 Kcal"},{"Shakes_MixedMealOf","mixed meal of"},{"Shakes_PrenetShakes","Prenet Shakes 210 Kcal"},{"Shakes_Women","Women 300 Kcal"},{"Start_Archive","ARCHIVE"},{"Start_Demo","DEMO"},{"TEE_Athlet","Athlete"},{"TEE_ChooseLifeStyle","Physical Activity Level"},{"TEE_LowActivity","Slightly Active"},{"TEE_NoActivity","Extremely Inactive"},{"TEE_NormalActivity","Active"},{"TEE_Sedentary","Sedentary"},{"TEE_VeryActivity","Vigorously Active"},{"Tutorial_CarouselHelpLbl","Swipe for change tutorial step"},{"Tutorial_HowMakePhoto","SET THE RED LINE ON THE CHEST/BREAST"},{"Tutorial_PaintStep_Antro","DRAG AND ALIGN THE UPPER GREEN LINE OVER THE CENTRAL OF EYES"},{"Tutorial_PaintStep1_1","DRAG AND ALIGN THE LOWER GREEN LINE OVER THE ANKLE JOINT"},{"Tutorial_PaintStep1_2","BY THE WAY, GOOD RESULTS ARE HIGHLY DEPENDENT FROM YOUR ALIGNEMENT SKILLS!"},{"Tutorial_PaintStep1_3","TAP THE ICON"},{"Tutorial_PaintStep2_1","TO SELECT ON UNDERWEAR COLOR"},{"Tutorial_PaintStep2_2","THE APPLICATION WILL TRY TO RECOGNIZE IT FOR YOU AUTOMATICALLY!"},{"Tutorial_PaintStep2_3","SELECT WHAT CONTOUR ALGORITHM FITS BETTER WITH YOUR SHAPE"},{"Tutorial_PaintStep3_1","ONE WORKS WITH TONE THE OTHER ONE WITH CONTRAST"},{"Tutorial_PaintStep3_2","DON'T MIND AT MINOR INACCURACY, YOU WILL BE ABLE TO CORRECT THEM LATER"},{"Tutorial_PaintStep3_3","IF NEEDED USE THE CORRECTION BRUSH"},{"Tutorial_PaintStep4_1","WHITE FOR THE BODY"},{"Tutorial_PaintStep4_2","BLACK FOR THE BACKGROUND"},{"Tutorial_PaintStep4_3","IF YOU HAVE DONE ERRORS DON'T WORRY USE THE UNDO TO GO BACK"},{"Tutorial_PaintStep4_4","www.akern.com"},{"Website","Alert"},{"Words_Alert","Error"},{"Words_Error","No"},{"Words_No","OK"},{"Words_Ok","Yes"},{"Words_Yes",""}};
+			Values.Add("EN-en", d2);
             
         }
 
-		public static string SayHello => GetValue("SayHello");
-		public static string Play => GetValue("Play");
+		public static string App_Name => GetValue("App_Name");
+		public static string Archive_NoExams => GetValue("Archive_NoExams");
+		public static string Back_BackGroundMayAffect => GetValue("Back_BackGroundMayAffect");
+		public static string Back_PhotoNoSubject => GetValue("Back_PhotoNoSubject");
+		public static string Back_Purpose => GetValue("Back_Purpose");
+		public static string Back_Start => GetValue("Back_Start");
+		public static string Back_Title => GetValue("Back_Title");
+		public static string Common_Difference => GetValue("Common_Difference");
+		public static string Common_IdealWeight => GetValue("Common_IdealWeight");
+		public static string Common_NewExam => GetValue("Common_NewExam");
+		public static string Common_Weight => GetValue("Common_Weight");
+		public static string Data_ChoosePicture => GetValue("Data_ChoosePicture");
+		public static string Data_DirectFromCamera => GetValue("Data_DirectFromCamera");
+		public static string Data_InsertBirthDate => GetValue("Data_InsertBirthDate");
+		public static string Data_InsertGender => GetValue("Data_InsertGender");
+		public static string Data_InsertHeight => GetValue("Data_InsertHeight");
+		public static string Data_InsertWeight => GetValue("Data_InsertWeight");
+		public static string Data_UploadFromFolder => GetValue("Data_UploadFromFolder");
+		public static string Generic_Error => GetValue("Generic_Error");
+		public static string Generic_WantStartNewExam => GetValue("Generic_WantStartNewExam");
+		public static string Home_About => GetValue("Home_About");
+		public static string Home_ApplicationTutorial => GetValue("Home_ApplicationTutorial");
+		public static string Home_ConfirmLogout => GetValue("Home_ConfirmLogout");
+		public static string Home_Credits => GetValue("Home_Credits");
+		public static string Home_Links => GetValue("Home_Links");
+		public static string Home_Logout => GetValue("Home_Logout");
+		public static string Home_PurchaseCredits => GetValue("Home_PurchaseCredits");
+		public static string Home_StartButton => GetValue("Home_StartButton");
+		public static string Home_TestBackground => GetValue("Home_TestBackground");
+		public static string Login_Failed => GetValue("Login_Failed");
+		public static string Login_InvalidForm => GetValue("Login_InvalidForm");
+		public static string Login_JoinUs => GetValue("Login_JoinUs");
+		public static string Login_Links => GetValue("Login_Links");
+		public static string Login_Login => GetValue("Login_Login");
+		public static string Login_Register => GetValue("Login_Register");
+		public static string Login_RememberMe => GetValue("Login_RememberMe");
+		public static string Msg_InternetRequired => GetValue("Msg_InternetRequired");
+		public static string Purchase_CantBuyCredits => GetValue("Purchase_CantBuyCredits");
+		public static string Purchase_ConfirmConsume => GetValue("Purchase_ConfirmConsume");
+		public static string Purchase_Consumable => GetValue("Purchase_Consumable");
+		public static string Purchase_Credits_X25 => GetValue("Purchase_Credits_X25");
+		public static string Purchase_Credits_X5 => GetValue("Purchase_Credits_X5");
+		public static string Purchase_Done => GetValue("Purchase_Done");
+		public static string Purchase_ElementLocked => GetValue("Purchase_ElementLocked");
+		public static string Purchase_Error => GetValue("Purchase_Error");
+		public static string Purchase_FreeFeatures => GetValue("Purchase_FreeFeatures");
+		public static string Purchase_Full_Description => GetValue("Purchase_Full_Description");
+		public static string Purchase_Full_Title => GetValue("Purchase_Full_Title");
+		public static string Purchase_Light_Description => GetValue("Purchase_Light_Description");
+		public static string Purchase_Light_Title => GetValue("Purchase_Light_Title");
+		public static string Purchase_NotEnoughtCredits => GetValue("Purchase_NotEnoughtCredits");
+		public static string Purchase_Restore => GetValue("Purchase_Restore");
+		public static string Purchase_Subscription3 => GetValue("Purchase_Subscription3");
+		public static string Result_BellySection => GetValue("Result_BellySection");
+		public static string Result_Bmi_Title => GetValue("Result_Bmi_Title");
+		public static string Result_Bmr => GetValue("Result_Bmr");
+		public static string Result_Bmr_Title => GetValue("Result_Bmr_Title");
+		public static string Result_ChestSection => GetValue("Result_ChestSection");
+		public static string Result_FatMass_Title => GetValue("Result_FatMass_Title");
+		public static string Result_FreeFatMass_Title1 => GetValue("Result_FreeFatMass_Title1");
+		public static string Result_HipSection => GetValue("Result_HipSection");
+		public static string Result_Shakes => GetValue("Result_Shakes");
+		public static string Result_Tbw => GetValue("Result_Tbw");
+		public static string Result_Tbw_Title => GetValue("Result_Tbw_Title");
+		public static string Result_Tee => GetValue("Result_Tee");
+		public static string Result_TeeDescription => GetValue("Result_TeeDescription");
+		public static string Results_BellyHt => GetValue("Results_BellyHt");
+		public static string Results_BMI => GetValue("Results_BMI");
+		public static string Results_CompareShape => GetValue("Results_CompareShape");
+		public static string Results_FFmKg => GetValue("Results_FFmKg");
+		public static string Results_FFmPercent => GetValue("Results_FFmPercent");
+		public static string Results_FmKg => GetValue("Results_FmKg");
+		public static string Results_FmPercent => GetValue("Results_FmPercent");
+		public static string Results_HowYouAre => GetValue("Results_HowYouAre");
+		public static string Results_HowYouShouldBe => GetValue("Results_HowYouShouldBe");
+		public static string Results_IdealFFmKg => GetValue("Results_IdealFFmKg");
+		public static string Results_IdealFmKg => GetValue("Results_IdealFmKg");
+		public static string Results_IdealShape => GetValue("Results_IdealShape");
+		public static string Results_StartNewExam => GetValue("Results_StartNewExam");
+		public static string Settings_QuickMode => GetValue("Settings_QuickMode");
+		public static string Shakes_1MixedMealOf => GetValue("Shakes_1MixedMealOf");
+		public static string Shakes_2PrenetShakes => GetValue("Shakes_2PrenetShakes");
+		public static string Shakes_BcmRegulationAdaption => GetValue("Shakes_BcmRegulationAdaption");
+		public static string Shakes_Breakfast => GetValue("Shakes_Breakfast");
+		public static string Shakes_FatRegulationPhase => GetValue("Shakes_FatRegulationPhase");
+		public static string Shakes_Men => GetValue("Shakes_Men");
+		public static string Shakes_MixedMealOf => GetValue("Shakes_MixedMealOf");
+		public static string Shakes_PrenetShakes => GetValue("Shakes_PrenetShakes");
+		public static string Shakes_Women => GetValue("Shakes_Women");
+		public static string Start_Archive => GetValue("Start_Archive");
+		public static string Start_Demo => GetValue("Start_Demo");
+		public static string TEE_Athlet => GetValue("TEE_Athlet");
+		public static string TEE_ChooseLifeStyle => GetValue("TEE_ChooseLifeStyle");
+		public static string TEE_LowActivity => GetValue("TEE_LowActivity");
+		public static string TEE_NoActivity => GetValue("TEE_NoActivity");
+		public static string TEE_NormalActivity => GetValue("TEE_NormalActivity");
+		public static string TEE_Sedentary => GetValue("TEE_Sedentary");
+		public static string TEE_VeryActivity => GetValue("TEE_VeryActivity");
+		public static string Tutorial_CarouselHelpLbl => GetValue("Tutorial_CarouselHelpLbl");
+		public static string Tutorial_HowMakePhoto => GetValue("Tutorial_HowMakePhoto");
+		public static string Tutorial_PaintStep_Antro => GetValue("Tutorial_PaintStep_Antro");
+		public static string Tutorial_PaintStep1_1 => GetValue("Tutorial_PaintStep1_1");
+		public static string Tutorial_PaintStep1_2 => GetValue("Tutorial_PaintStep1_2");
+		public static string Tutorial_PaintStep1_3 => GetValue("Tutorial_PaintStep1_3");
+		public static string Tutorial_PaintStep2_1 => GetValue("Tutorial_PaintStep2_1");
+		public static string Tutorial_PaintStep2_2 => GetValue("Tutorial_PaintStep2_2");
+		public static string Tutorial_PaintStep2_3 => GetValue("Tutorial_PaintStep2_3");
+		public static string Tutorial_PaintStep3_1 => GetValue("Tutorial_PaintStep3_1");
+		public static string Tutorial_PaintStep3_2 => GetValue("Tutorial_PaintStep3_2");
+		public static string Tutorial_PaintStep3_3 => GetValue("Tutorial_PaintStep3_3");
+		public static string Tutorial_PaintStep4_1 => GetValue("Tutorial_PaintStep4_1");
+		public static string Tutorial_PaintStep4_2 => GetValue("Tutorial_PaintStep4_2");
+		public static string Tutorial_PaintStep4_3 => GetValue("Tutorial_PaintStep4_3");
+		public static string Tutorial_PaintStep4_4 => GetValue("Tutorial_PaintStep4_4");
+		public static string Website => GetValue("Website");
+		public static string Words_Alert => GetValue("Words_Alert");
+		public static string Words_Error => GetValue("Words_Error");
+		public static string Words_No => GetValue("Words_No");
+		public static string Words_Ok => GetValue("Words_Ok");
+		public static string Words_Yes => GetValue("Words_Yes");
 
 
 		private static string GetValue(string key)
         {
-            if (values.ContainsKey(PclResMan.Lang))
-                return values[PclResMan.Lang][key];
+            if (Values.ContainsKey(PclResMan.Lang))
+                return Values[PclResMan.Lang][key];
             else
             {
-                return PclResMan.Default == null ? values[values.First().Key][key] : values[PclResMan.Default][key];
+                return PclResMan.Default == null ? Values [Values.First().Key][key] : Values [PclResMan.Default][key];
             }
         }
     }

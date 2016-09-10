@@ -1,1 +1,1 @@
-PclLocalizer.Console.exe -f "C:\Users\marcogm.INT\Desktop\test.txt" -n NugetTest -d TestLoc -s ;
+PclLocalizer.Console.exe -f TestRes.csv -n NugetTest -d TestLoc.cs -c TestLoc -s ;

@@ -45,6 +45,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="TestRes.csv" />
+    <None Include="TestRes.xlsx" />
     <None Include="TheBatch.bat" />
   </ItemGroup>
   <ItemGroup>

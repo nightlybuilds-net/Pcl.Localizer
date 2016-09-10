@@ -18,6 +18,7 @@ namespace PclLocalizer.Console
         public string DestinationFile => this.GetValue(Constants.DestinationParam);
         public string Separator => this.GetValue(Constants.SeparatorParam);
         public string NameSpace => this.GetValue(Constants.NamespaceParam);
+        public string ClassName => this.GetValue(Constants.ClassNameParam);
 
         private string GetValue(string param)
         {

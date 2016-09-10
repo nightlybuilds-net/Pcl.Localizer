@@ -1,1 +1,1 @@
-PclLocalizer.Console.exe -f resources.txt -n NugetTest -d LocRes -s ;
+PclLocalizer.Console.exe -f resources.txt -n NugetTest -d LocRes -s ; -c LocRes.cs

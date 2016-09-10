@@ -24,13 +24,16 @@ namespace PclLocalizer.Console
                 throw new FileNotFoundException("Input file not exist! -f");
 
             if (!this.DestFileArgumentsExist)
-                throw new ParameterMissingException("I need destination class name parameter! -d");
+                throw new ParameterMissingException("I need destination file parameter! -d");
 
             if (!this.SeparatorArgumentsExist)
                 throw new ParameterMissingException("I need separator for input file! -s");
 
             if (!this.NamespaceArgumentsExist)
                 throw new ParameterMissingException("I need namespace for input file! -n");
+
+            if (!this.ClassArgumentsExist)
+                throw new ParameterMissingException("I need a destination classname! -c");
         }
 
         /// <summary>
@@ -107,6 +110,24 @@ namespace PclLocalizer.Console
                 if (!paramexist) return false;
 
                 var index = this._arguments.IndexOf(Constants.NamespaceParam);
+                if (index >= this._arguments.Count - 1) return false;
+
+                return true;
+            }
+        }
+
+        /// <summary>
+        /// Exist arguments -c and is passed
+        /// </summary>
+        public bool ClassArgumentsExist
+        {
+            get
+            {
+                var paramexist = this._arguments.Contains(Constants.ClassNameParam);
+
+                if (!paramexist) return false;
+
+                var index = this._arguments.IndexOf(Constants.ClassNameParam);
                 if (index >= this._arguments.Count - 1) return false;
 
                 return true;

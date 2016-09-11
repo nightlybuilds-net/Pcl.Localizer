@@ -81,7 +81,7 @@ namespace PclLocalizer.Console.Properties {
         ///
         ///{{properties}}
         ///
-        ///		 [rest of string was truncated]&quot;;.
+        ///   [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string MagicFile {
             get {

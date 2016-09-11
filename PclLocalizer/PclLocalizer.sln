@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PclLocalizer.Console", "Pcl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PclLocalizer.ResMan", "PclLocalizer.ResMan\PclLocalizer.ResMan.csproj", "{3719D1C0-F9BD-4DD0-8162-7B7EEB285FFD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Buttami", "Buttami\Buttami.csproj", "{E3DD094E-33EB-459C-9B0F-B4DDD0940B50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Buttami.Console", "Buttami.Console\Buttami.Console.csproj", "{F006802D-3E26-4FC0-888A-83FC4E601888}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{3719D1C0-F9BD-4DD0-8162-7B7EEB285FFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3719D1C0-F9BD-4DD0-8162-7B7EEB285FFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3719D1C0-F9BD-4DD0-8162-7B7EEB285FFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3DD094E-33EB-459C-9B0F-B4DDD0940B50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3DD094E-33EB-459C-9B0F-B4DDD0940B50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3DD094E-33EB-459C-9B0F-B4DDD0940B50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3DD094E-33EB-459C-9B0F-B4DDD0940B50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F006802D-3E26-4FC0-888A-83FC4E601888}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F006802D-3E26-4FC0-888A-83FC4E601888}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F006802D-3E26-4FC0-888A-83FC4E601888}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F006802D-3E26-4FC0-888A-83FC4E601888}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

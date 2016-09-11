@@ -138,13 +138,14 @@ namespace {{namespace}}
 
 {{properties}}
 
-		private static string GetValue(string key)
+        public static string GetValue(string key, string culture = null)
         {
-            if (Values.ContainsKey(PclResMan.Lang))
-                return Values[PclResMan.Lang][key];
+            var cult = culture ?? PclResMan.Lang;
+            if (Values.ContainsKey(cult))
+                return Values[cult][key];
             else
             {
-                return PclResMan.Default == null ? Values [Values.First().Key][key] : Values [PclResMan.Default][key];
+                return PclResMan.Default == null ? Values[Values.First().Key][key] : Values[PclResMan.Default][key];
             }
         }
     }

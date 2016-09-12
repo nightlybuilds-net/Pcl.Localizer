@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using PclLocalizer.Console.Properties;
 
@@ -77,7 +78,11 @@ namespace PclLocalizer.Console.Worker
                 {
                     if(index == 0)continue;
                     var splitted = lines[index].Split(new[] { separator }, StringSplitOptions.None);
-                    var key = splitted[0];
+
+                    //Key Key
+                    var keyOriginal = splitted[0];
+                    var key = Regex.Replace(keyOriginal, @"\s+", ""); //trim
+
                     var value = splitted[langIndex];
 
                     dictionarySection.Append($"{{\"{key}\",\"{value}\"}},");
@@ -96,7 +101,10 @@ namespace PclLocalizer.Console.Worker
             {
                 if (index == 0) continue;
                 var splitted = lines[index].Split(new[] { separator }, StringSplitOptions.None);
-                var key = splitted[0];
+
+                //Key Key
+                var keyOriginal = splitted[0];
+                var key = Regex.Replace(keyOriginal, @"\s+", ""); //trim
 
                 propertiesSection.AppendLine($"\t\tpublic static string {key} => GetValue(\"{key}\");");
             }

@@ -12,11 +12,13 @@ namespace PclLocalizer.Console
         public static string DestinationParam => "-d";
         public static string SeparatorParam => "-s";
         public static string NamespaceParam => "-n";
+        public static string ClassNameParam => "-c";
 
         public static string NamespacePlaceHolder => "{{namespace}}";
-        public static string DestinationPlaceHolder => "{{destination}}";
         public static string PropertiesPlaceHolder => "{{properties}}";
         public static string DictionariesPlaceHolder => "{{dictionaries}}";
+        public static string ClassNamePlaceHolder => "{{classname}}";
+
 
 
     }

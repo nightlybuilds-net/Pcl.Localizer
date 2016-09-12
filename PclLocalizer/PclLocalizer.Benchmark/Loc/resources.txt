@@ -1,3 +1,0 @@
-key;it-IT;en-EN
-SayHello;Ciao!;Hello!
-Play;Giocare;Play

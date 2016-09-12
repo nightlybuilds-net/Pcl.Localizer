@@ -2,13 +2,13 @@
 *A simply cross platform alternative to Resx.*
 
 #*Quick Start*
-*Add Pcl.Localizer nuget package to all projects that will use localization.*
+*Add [Pcl.Localizer](https://www.nuget.org/packages/Pcl.Localizer/) nuget package to all projects that will use localization.*
 In your entry point app call:
 
 	PclResMan.SetLanguage(yourlanguage);
 
 **How generate resources:**
-You can use PclLocalization.Console or add Pcl.Localization.Generator nuget package to the project that will contains the resources.
+You can use PclLocalization.Console or add [Pcl.Localization.Generator](https://www.nuget.org/packages/Pcl.Localizer.Generator) nuget package to the project that will contains the resources.
 The nuget will create a folder called Loc with 3 files:
 
  1. The Console app

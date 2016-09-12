@@ -15,7 +15,7 @@ The nuget will create a folder called Loc with 3 files:
  2. A txt example file 
  3. A bat for generate resource
 
-When you run the bat the txt file will be parsed and a cs file will be generate, simply add the new cs file to your project. You can call your resource like this:
+When you run the bat the txt file will be parsed and a cs file will be generate..now simply include the new cs file to your project. You can call your resource like this:
 
 	MyLoc.Test
 

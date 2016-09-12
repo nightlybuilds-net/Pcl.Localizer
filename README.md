@@ -1,5 +1,6 @@
 # **PCL Localizer**.
 *A simply cross platform alternative to Resx.*
+[Follow this guide step by step!](http://markjackmilian.net/blog/pcllocalizer-step-by-step/)
 
 #*Quick Start*
 *Add [Pcl.Localizer](https://www.nuget.org/packages/Pcl.Localizer/) nuget package to all projects that will use localization.*

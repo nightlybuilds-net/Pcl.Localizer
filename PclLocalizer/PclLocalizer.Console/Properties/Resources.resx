@@ -141,7 +141,7 @@ namespace {{namespace}}
         public static string GetValue(string key, string culture = null)
         {
             var cult = culture ?? PclResMan.Lang;
-            if (Values.ContainsKey(cult))
+            if (cult != null &amp;&amp; Values.ContainsKey(cult))
                 return Values[cult][key];
             else
             {

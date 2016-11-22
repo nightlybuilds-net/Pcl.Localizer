@@ -1,6 +1,6 @@
 # **PCL Localizer**.
 *A simply cross platform alternative to Resx.*
-An improved version and future updates is avaiable [HERE](https://bitbucket.org/markjackmilian/pcl.localizer.multifile)
+An improved version and future updates is avaiable [HERE](https://bitbucket.org/markjackmilian/pcl.localizer.multifile)    
 [Follow this guide step by step!](http://markjackmilian.net/blog/pcllocalizer-step-by-step/)
 
 #*Quick Start*
